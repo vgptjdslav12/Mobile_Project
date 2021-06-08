@@ -19,7 +19,6 @@ $("#page_highlight").ready(function()
 		for(i=0; i<4;i++){
 			tx.executeSql("INSERT INTO "+table+" VALUES ('" + 
 				arr[i] + "')");
-			console.log("INSERT INTO "+table+" VALUES ('"+arr[i]+"')");
 		}
 	});
 	print_highlight();
@@ -32,7 +31,7 @@ function print_highlight()
 		tx.executeSql("SELECT * FROM "+table,[],function(tx,results){
 			var len = results.rows.length, i;
 			//main 화면에 적용
-			document.querySelector("#main_highlight").innerHTML = '<iframe class="highlight_frame" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
+			document.querySelector("#main_highlight").innerHTML += '<iframe class="highlight_frame" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
 			for(i=0; i<len;i++)
 			{
 				//layout
@@ -72,7 +71,6 @@ $("#page_update").ready(function()
 		for(i=0; i<3;i++){
 			tx.executeSql("INSERT INTO "+table+" VALUES ('" + 
 				uarr[i] + "')");
-			console.log("INSERT INTO "+table+" VALUES ('"+uarr[i]+"')");
 		}
 	});
 	print_update();
@@ -85,7 +83,7 @@ function print_update()
 		tx.executeSql("SELECT * FROM "+table,[],function(tx,results){
 			var len = results.rows.length, i;
 			//main 화면에 적용
-			document.querySelector("#main_update").innerHTML = '<iframe class="update_frame" data-role="content" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
+			document.querySelector("#main_update").innerHTML += '<iframe class="update_frame" data-role="content" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
 			for(i=0; i<len;i++)
 			{
 				//layout

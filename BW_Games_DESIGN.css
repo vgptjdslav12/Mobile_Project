@@ -70,9 +70,9 @@ img
 	margin-top:5%;
 	float:center;
 }
-#main_highlight #main_update
+.main_content
 {
-	width:99%;
+	padding-right:2%;
 }
 table
 {
