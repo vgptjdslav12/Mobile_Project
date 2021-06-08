@@ -1,25 +1,27 @@
 //db open
+var arr = ["https://www.youtube.com/embed/IF66juAdJRc","https://www.youtube.com/embed/XuKTvveiJEE",
+   "https://www.youtube.com/embed/WaDTyZMNNNw","https://www.youtube.com/embed/F90ZVxHh-Is"];
+var uarr = ["https://www.youtube.com/embed/jqsDcCQKJRg","https://www.youtube.com/embed/fg5eSralpD8",
+	"https://www.youtube.com/embed/CM6aWs6X04M"];
 var db;
 try{
-	db=openDatabase("DB", "1.0", "Test DB", 2 * 1024 * 1024);
+	db=openDatabase("DB", "1.0", "Main DB", 2 * 1024 * 1024);
 	} catch(arr) {
 	document.write("브라우저가 WEB SQL을 지원하지 않습니다.");
 	}
 
-//document ready
-$(document).ready(function()
+//light page wirte
+$("#page_highlight").ready(function()
 {
-	//table create
 	db.transaction(function(tx){
 		var table = "Highlight_Table";
 		tx.executeSql("CREATE TABLE IF NOT EXISTS " + table + " (link unique)");
-		var table = "Update_Table";
-		tx.executeSql("CREATE TABLE IF NOT EXISTS " + table + " (link unique)");
+		for(i=0; i<4;i++){
+			tx.executeSql("INSERT INTO "+table+" VALUES ('" + 
+				arr[i] + "')");
+			console.log("INSERT INTO "+table+" VALUES ('"+arr[i]+"')");
+		}
 	});
-});
-//highlight page wirte
-$("#page_highlight").ready(function()
-{
 	print_highlight();
 });
 function print_highlight()
@@ -64,6 +66,15 @@ function highlight_delete()
 }
 $("#page_update").ready(function()
 {
+	db.transaction(function(tx){
+		var table = "Update_Table";
+		tx.executeSql("CREATE TABLE IF NOT EXISTS " + table + " (link unique)");
+		for(i=0; i<3;i++){
+			tx.executeSql("INSERT INTO "+table+" VALUES ('" + 
+				uarr[i] + "')");
+			console.log("INSERT INTO "+table+" VALUES ('"+uarr[i]+"')");
+		}
+	});
 	print_update();
 })
 function print_update()

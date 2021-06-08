@@ -7,6 +7,11 @@
 	box-sizing:border-box;
 	width:100%;
 }
+.highlight_content
+{
+	box-sizing:border-box;
+	padding:0px;
+}
 .highlight
 {
 	position:relative;
