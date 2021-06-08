@@ -12,6 +12,7 @@
 	box-sizing:border-box;
 	padding:0px;
 }
+
 .highlight
 {
 	position:relative;
@@ -68,4 +69,12 @@ img
 	width:80%;
 	margin-top:5%;
 	float:center;
+}
+.main_content
+{
+	padding-right:2%;
+}
+table
+{
+	width:100%;
 }
