@@ -14,7 +14,7 @@
 	<section id="page_main" data-role="page">
 		<header class="header1" data-role="header">
 			<header>
-				<a href="#page_main" data-role="none"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
+				<a href="#page_main" data-role="none" onclick="print_main()"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
 			</header>
 			<nav data-role="navbar">
 				<ul>
@@ -26,10 +26,14 @@
 			</nav>
 		</header>
 		<article class="main_content" data-role="content">
-			<article id="main_highlight" class="highlight" data-role="content"></article>
-			<article id="main_update" class="update" data-role="content"></article>
+			<header data-role="header" data-backbtn="false"><h3>하이라이트 영상</h3></header>
+			<article id="main_highlight" class="main"></article>
+			<br>
+			<header data-role="header" data-backbtn="false"><h3>티저 영상</h3></header>
+			<article id="main_update" class="main" data-role="content"></article>
 		</article>
 		<article data-role="content">
+			<header data-role="header" data-backbtn="false"><h3>세일 목록</h3></header>
 			<article id="main_sale" data-role="content"></article>
 		</article>
 		<footer data-role="footer">COPYRIGHT by HyeSeong && JaeHyeon</footer>
@@ -38,7 +42,7 @@
 	<section id="page_highlight" data-role="page">
 		<header class="header1" data-role="header">
 			<header>
-				<a href="#page_main" data-role="none"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
+				<a href="#page_main" data-role="none" onclick="print_main()"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
 			</header>
 			<nav data-role="navbar">
 				<ul>
@@ -57,7 +61,7 @@
 		<section id="page_sale" data-role="page">
 		<header class="header1" data-role="header">
 			<header>
-				<a href="#page_main" data-role="none"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
+				<a href="#page_main" data-role="none" onclick="print_main()"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
 			</header>
 			<nav data-role="navbar">
 				<ul>
@@ -68,7 +72,10 @@
 				</ul>
 			</nav>
 		</header>
-		<article class="sale_content" data-role="content">
+		<article data-role="content">
+			<header data-role="header" data-backbtn="false"><h3>세일 목록</h3></header>
+			<article class="sale_content" data-role="content">
+			</article>
 		</article>
 		<footer data-role="footer">COPYRIGHT by HyeSeong && JaeHyeon</footer>
 	</section>
@@ -76,7 +83,7 @@
 		<section id="page_intel" data-role="page">
 		<header class="header1" data-role="header">
 			<header>
-				<a href="#page_main" data-role="none"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
+				<a href="#page_main" data-role="none" onclick="print_main()"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
 			</header>
 			<nav data-role="navbar">
 				<ul>
@@ -87,20 +94,35 @@
 				</ul>
 			</nav>
 		</header>
-		<a href="https://inven.co.kr/" target="_blank"><img src="image/인벤_로고.png"/ class="logo"/></a>
-		<article class="intel">
-			<iframe class="intel_frame" data-role="content" src="https://rss.bloople.net/?url=https%3A%2F%2Fpage.co.kr%2Fboard%2Fbbs%2Flink.php%3Fbo_table%3Drss%26wr_id%3D315%26no%3D1&detail=-1&showtitle=false&type=html"></iframe>
+		<article class="intel_content" data-role="content">
+			<article style="background-color:white;" data-role="content">
+				<a href="https://inven.co.kr/" target="_blank"><img src="image/인벤_로고.png"/ class="logo"/></a>
+			</article>
 		</article>
-		<a href="https://www.ruliweb.com/" target="_blank"><img src="image/루리웹_로고.png"/ class="logo"/></a>
-		<article class="intel" >
-			<iframe class="intel_frame" data-role="content" src="https://rss.bloople.net/?url=http%3A%2F%2Fbbs.ruliweb.com%2Fnews%2F529%2Frss&detail=-1&showtitle=false&type=html"></iframe>
+		<article class="intel_content" data-role="content">
+			<header data-role="header" data-backbtn="false"><h3>인벤 웹진 뉴스</h3></header>
+			<article class="intel" data-role="content">
+				<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fnews%2Frss.php&num=10&desc=1&utf=y&css=rss-box-"  charset="UTF-8" type="text/javascript"></script>
+			</article>
+		</article>
+		<article data-role="content"></article>
+		<article class="intel_content" data-role="content">
+			<article data-role="content" style="background-color:white;">
+				<a href="https://www.ruliweb.com/" target="_blank"><img src="image/루리웹_로고.png"/ class="logo"/></a>
+			</article>
+		</article>
+		<article class="intel_content" data-role="content">
+			<header data-role="header" data-backbtn="false"><h3>루리웹 뉴스</h3></header>
+			<article class="intel" data-role="content">
+				<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fbbs.ruliweb.com%2Fnews%2F529%2Frss&num=10&desc=1&utf=y&css=rss-box-"  charset="UTF-8" type="text/javascript"></script>
+			</article>
 		</article>
 		<footer data-role="footer">COPYRIGHT by HyeSeong && JaeHyeon</footer>
 	</section>
 		<section id="page_update" data-role="page">
 		<header class="header1" data-role="header">
 			<header>
-				<a href="#page_main" data-role="none"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
+				<a href="#page_main" data-role="none" onclick="print_main()"><img class="banner" src="image/Gamebanner.jpg"/>	</a>
 			</header>
 			<nav data-role="navbar">
 				<ul>
@@ -118,12 +140,16 @@
 	</section>
 	<section id="admin_page" data-role="page">
 		<article>
-			<input class="highlight_input" type="text"><a onclick="highlight_add()" data-role="button" data-inline="true">Highlight_link 입력</a>
-			<input class="highlight_delete" type="text"><a onclick="highlight_delete()" data-role="button" data-inline="true">Highlight_rowid 삭제</a>
+			<input class="highlight_input_link" value="highlight_link" type="text">
+			<input class="highlight_input_name" value="highlight_name" type="text">
+			<a onclick="highlight_add()" data-role="button" data-inline="true">Highlight_link 입력</a>
+			<input class="highlight_delete" value="highlight_delete_name" type="text"><a onclick="highlight_delete()" data-role="button" data-inline="true">Highlight_name 삭제</a>
 		</article>
 		<article>
-			<input class="update_input" type="text"><a onclick="update_add()" data-role="button" data-inline="true">update_link 입력</a>
-			<input class="update_delete" type="text"><a onclick="update_delete()" data-role="button" data-inline="true">update_rowid 삭제</a>
+			<input class="update_input_link" value="update_link" type="text">
+			<input class="update_input_name" value="update_name" type="text">
+			<a onclick="update_add()" data-role="button" data-inline="true">update_link 입력</a>
+			<input class="update_delete" value="update_delete_name" type="text"><a onclick="update_delete()" data-role="button" data-inline="true">update_name 삭제</a>
 		</article>
 	</section>
 </body>
