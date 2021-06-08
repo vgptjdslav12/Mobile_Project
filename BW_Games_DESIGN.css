@@ -1,0 +1,71 @@
+.header1
+{
+	padding:0px; 
+}
+.banner
+{
+	box-sizing:border-box;
+	width:100%;
+}
+.highlight_content
+{
+	box-sizing:border-box;
+	padding:0px;
+}
+.highlight
+{
+	position:relative;
+	width:100%;
+	height:0;
+	padding-bottom:56.25%;
+}
+.update
+{
+	position:relative;
+	width:100%;
+	height:0;
+	padding-bottom:56.25%;
+}
+.update_frame
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+img
+{
+	width:100%;
+}
+.highlight_frame
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.intel_frame
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.intel
+{
+	position:relative;
+	width:100%;
+	margin-top:0px;
+	padding-bottom:56.25%;
+}
+.logo
+{
+	position:relative;
+	left:10%;
+	width:80%;
+	margin-top:5%;
+	float:center;
+}
