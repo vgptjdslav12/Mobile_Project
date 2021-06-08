@@ -70,9 +70,10 @@ img
 	margin-top:5%;
 	float:center;
 }
-.main_content
+#main_highlight, #main_update
 {
-	padding-right:2%;
+	box-sizing:border-box;
+	margin-right:3%;
 }
 table
 {

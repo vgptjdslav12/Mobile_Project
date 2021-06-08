@@ -31,7 +31,7 @@ function print_highlight()
 		tx.executeSql("SELECT * FROM "+table,[],function(tx,results){
 			var len = results.rows.length, i;
 			//main 화면에 적용
-			document.querySelector("#main_highlight").innerHTML += '<iframe class="highlight_frame" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
+			document.querySelector("#main_highlight").innerHTML += '<iframe id="highlight_main" class="highlight_frame" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
 			for(i=0; i<len;i++)
 			{
 				//layout
@@ -83,7 +83,7 @@ function print_update()
 		tx.executeSql("SELECT * FROM "+table,[],function(tx,results){
 			var len = results.rows.length, i;
 			//main 화면에 적용
-			document.querySelector("#main_update").innerHTML += '<iframe class="update_frame" data-role="content" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
+			document.querySelector("#main_update").innerHTML += '<iframe id="update_main" class="update_frame" data-role="content" src="'+results.rows.item(0).link+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-role="content"></iframe></article>'
 			for(i=0; i<len;i++)
 			{
 				//layout
