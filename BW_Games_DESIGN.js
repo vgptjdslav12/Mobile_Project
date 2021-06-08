@@ -7,7 +7,7 @@ var uarr = ["https://www.youtube.com/embed/jqsDcCQKJRg","https://www.youtube.com
 var unarr = ["레인보우식스 Extraction 티저","6월 신작 게임", "귀멸의 칼날 히노카미 혈풍담"]
 var db;
 try{
-	db=openDatabase("DB", "1.0", "Main DB", 2 * 1024 * 1024);
+	db=openDatabase("Project_DB", "1.0", "Main DB", 2 * 1024 * 1024);
 	} catch(arr) {
 	document.write("브라우저가 WEB SQL을 지원하지 않습니다.");
 	}
